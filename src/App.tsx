@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Dropdown from "./components/Dropdown";
+import { Dropdown, DropdownItem } from "./components/Dropdown";
 const limit = 3;
 
 function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
-  const [cities, setCities] = useState([
+  const [citiesData, setCitiesData] = useState([
     {
       id: 1,
       name: "Delhi",
@@ -93,8 +93,8 @@ function App() {
   };
 
   const handleCloseButton = (id: number) => {
-    const newCities = cities.filter((city) => city.id !== id);
-    setCities(newCities);
+    const newCities = citiesData.filter((city) => city.id !== id);
+    setCitiesData(newCities);
   };
 
   return (
@@ -102,7 +102,7 @@ function App() {
       <Heading />
       <SearchBar onSearch={handleInputChange} />
       <div className="mt-12 lg:grid lg:grid-cols-3">
-        {cities.map((city) => (
+        {citiesData.map((city) => (
           <WeatherCard
             city={city}
             key={city.id}
@@ -203,7 +203,9 @@ function SearchBar({
           />
         </form>
       </div>
-      <Dropdown />
+      <Dropdown>
+        <DropdownItem>Item 1</DropdownItem>
+      </Dropdown>
     </>
   );
 }
