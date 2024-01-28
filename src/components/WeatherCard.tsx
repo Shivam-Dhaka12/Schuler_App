@@ -9,10 +9,12 @@ export function WeatherCard({
   city: CityWeatherData;
 }) {
   return (
-    <div className="group relative mx-auto mb-6  max-w-xl rounded-lg border bg-slate-100  bg-opacity-45 py-4 text-slate-900 shadow-sm shadow-neutral-400 transition-shadow hover:shadow-md hover:shadow-neutral-400 lg:col-span-2 lg:mx-0">
+    <div className="group relative mx-auto mb-6 max-h-52 max-w-xl  rounded-lg bg-slate-50 py-4 text-slate-900  shadow-md transition-shadow  hover:shadow-lg  lg:mx-0">
       <div className="grid grid-cols-10  flex-col items-stretch">
         <div className="col-span-7 px-2">
-          <p className="text-md px-4 pt-2 font-semibold md:px-6">{city.name}</p>
+          <p className="text-md px-4 pt-2 font-semibold text-sky-600 md:px-6 ">
+            {city.name}
+          </p>
           <div className="grid grid-cols-2 px-2 py-4 text-center md:px-6">
             <div className="py-2">
               <img

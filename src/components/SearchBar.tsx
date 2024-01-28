@@ -4,7 +4,7 @@ import { citiesWeatherStateAtom } from "../atoms/atom";
 import { useSetRecoilState } from "recoil";
 
 const limit = 3;
-const apiKey = "4dd2db1a779900cb6433ff644f8f1643";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 type Option = {
   lon: number;
@@ -115,7 +115,7 @@ export function SearchBar() {
     <>
       <div className="mb-2 mt-8">
         <form
-          className="mx-auto flex rounded-t-lg border-b-4 border-b-slate-200 shadow-sm shadow-neutral-400 transition-all hover:border-b-slate-400"
+          className="mx-auto flex rounded-t-lg border-b-4 border-b-sky-700 shadow-md shadow-sky-100 transition-all hover:border-b-sky-500"
           onSubmit={(e) => handleSubmit(e)}
         >
           <input

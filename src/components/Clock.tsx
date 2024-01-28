@@ -28,7 +28,7 @@ export default function Clock({ timezone }: { timezone: number }) {
   }
 
   return (
-    <div className="col-span-3 flex  flex-col justify-center border-l border-l-slate-300 text-center font-medium text-slate-700">
+    <div className="col-span-3 flex  flex-col justify-center border-l border-l-slate-300 text-center font-medium text-sky-600 ">
       <span className="text-xl">{currentTime[0]}</span>
       <span className=" text-lg">{currentTime[1]}</span>
     </div>
