@@ -111,6 +111,3 @@ export default function NewsYouTube() {
     </div>
   );
 }
-function asyncFetchData() {
-  throw new Error("Function not implemented.");
-}
