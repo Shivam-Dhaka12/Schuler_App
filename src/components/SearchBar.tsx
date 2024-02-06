@@ -82,7 +82,7 @@ export function SearchBar() {
           setIsLoading(true);
 
           const res = await fetch(
-            `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=${limit}&appid=${apiKey}`,
+            `https://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=${limit}&appid=${apiKey}`,
             {
               signal: controller.signal,
             },
