@@ -1,7 +1,3 @@
 export function Heading() {
-  return (
-    <p className="text-center font-sans text-3xl font-bold text-sky-700">
-      Schuler App
-    </p>
-  );
+  return <img src="/Schuler_Logo.jpg" alt="Schuler_Logo" className="mx-auto" />;
 }
